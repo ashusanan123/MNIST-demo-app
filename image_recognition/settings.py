@@ -66,6 +66,17 @@ TEMPLATES = [
 WSGI_APPLICATION = 'image_recognition.wsgi.application'
 
 
+DEBUG = True
+
+ALLOWED_HOSTS = []
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
+
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 
@@ -108,6 +119,18 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 
 )
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.10/howto/static-files/
+
+STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+DATA_UPLOAD_MAX_NUMBER_FIELDS = None
+
 
 
 try:
