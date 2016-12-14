@@ -37,7 +37,8 @@ All the requirements are mentioned in requirements.txt file.
 
 ### 4. Start the server and access the webpage
 
-`$ python manage.py runserver`
+	$ python manage.py migrate
+	$ python manage.py runserver
 
 Now visit **127.0.0.1:8000**
 
