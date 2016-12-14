@@ -1,7 +1,7 @@
 ## MNIST Character Recognition App
 
 MNIST-app is a web-app to demonstrate **MNIST Character recognition** using Multi-layer Perceptron. The web framework is written using Django.
-The repository includes MNIST test dataset. Path to dataset `**prediction_Modeule/mnist-data**`
+The repository includes MNIST test dataset. Path to dataset **`prediction_Modeule/mnist-data`**
 
 The system takes an image as a POST request and returns json value including ***fileName, predicted label and the confidence***. This json value is displayed on the webpage along with the image itself.
 
