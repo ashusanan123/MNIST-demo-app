@@ -28,23 +28,3 @@ def index(request):
             raise Http404
     return render(request, 'index.html')
 
-
-# No need for this
-#
-# @csrf_exempt
-# def upload_image(request):
-#     if request.method == 'POST':
-#         print request.POST
-#         print request.FILES
-#         form = ImageUploadForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             image_object = form.save(commit=True)
-#             resut_dict = dict()
-#             resut_dict['name'] = image_object.image.name.split('/')[1]
-#             resut_dict['path'] = image_object.image.url
-#
-#             resut_dict['label'], resut_dict['confidence'] = predict(image_object.image.path)
-#             return HttpResponse(json.dumps(resut_dict))
-#         else:
-#             raise Http404
-#

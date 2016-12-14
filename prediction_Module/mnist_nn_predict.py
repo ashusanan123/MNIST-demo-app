@@ -18,23 +18,6 @@ def predict_nn(img):
 	return label, confidence
 
 
-# # rescale the data, use the traditional train/test split
-# X, y = mnist.data / 255., mnist.target
-# X_test = X[60000:]
-# y_test = y[60000:]
-# count = 0
-
-# for i in range(10000):
-# 	img = np.reshape(X_test[i], (28,28))
-# 	img = img*255
-# 	im = Image.fromarray(img)
-
-# 	im = im.convert('1')
-
-# 	name = './mnist-data/img'+str(count)+'.png'
-# 	im.save(name)
-# 	count += 1
-
 def preprocess(image_path):
 	img = Image.open(image_path)
 	img = np.asarray(img.getdata(), dtype = 'float32')
@@ -56,14 +39,5 @@ def predict(image_path, clf='NN'):
 		label, confidence = predict_nn(img)
 
 	return label, confidence    # The output should be a json with "name of the file, label predicted and confidence value. "
-
-
-
-# check = './mnist-data/img5132.png'
-
-# label, confidence = predict(check)
-
-# print label
-# print confidence
 
 
